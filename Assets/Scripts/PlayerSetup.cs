@@ -6,11 +6,13 @@ using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 using UnityEngine.XR.Interaction.Toolkit.Inputs;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
+using UnityEngine.XR.Interaction.Toolkit.Inputs.Simulation;
+using UnityEngine.XR.Hands.Samples.VisualizerSample;
+using UnityEngine.XR.Hands;
 
 public class PlayerSetup: NetworkBehaviour {
     void Start() {
         if( !isLocalPlayer ) {
-
             // Disable Camera
             var camera = GetComponentInChildren<Camera>();
             if( camera != null ) {
@@ -53,11 +55,11 @@ public class PlayerSetup: NetworkBehaviour {
                 characterController.enabled = false;
             }
 
-            //// Disable PlayerInput
-            //var playerInput = GetComponent<UnityEngine.InputSystem.PlayerInput>();
-            //if( playerInput != null && !isLocalPlayer ) {
-            //    playerInput.enabled = false;
-            //}
+            // Disable PlayerInput
+            var playerInput = GetComponent<UnityEngine.InputSystem.PlayerInput>();
+            if( playerInput != null ) {
+                playerInput.enabled = false;
+            }
 
             // Disable XR Input Modality Manager
             var inputModalityManager = GetComponent<XRInputModalityManager>();
@@ -82,7 +84,44 @@ public class PlayerSetup: NetworkBehaviour {
             foreach( var interactor in interactors ) {
                 interactor.enabled = false;
             }
-        }
-    }
 
+            // Disable interaction layers
+            foreach( var interactor in interactors ) {
+                interactor.enabled = false;
+                interactor.gameObject.layer = LayerMask.NameToLayer( "Ignore Raycast" ); // Example layer
+            }
+
+            // Disable controller animator
+            var controllerAnimator = GetComponentInChildren<ControllerAnimator>();
+            if( controllerAnimator != null ) {
+                controllerAnimator.enabled = false;
+            }
+
+            // Disable network animator
+            var networkAnimator = GetComponent<NetworkAnimator>();
+            if( networkAnimator != null ) {
+                networkAnimator.enabled = false;
+            }
+
+            // Disable device simulator
+            var xrDeviceSimulator = GetComponentInChildren<XRDeviceSimulator>();
+            if( xrDeviceSimulator != null ) {
+                xrDeviceSimulator.enabled = false;
+            }
+
+            // Disable hand visualizer
+            var handVisuals = GetComponentsInChildren<HandVisualizer>();
+            foreach( var visual in handVisuals ) {
+                visual.enabled = false;
+            }
+
+            // Disable interaction manager
+            var interactionManagers = GetComponentsInChildren<XRInteractionManager>();
+            foreach( var manager in interactionManagers ) {
+                manager.enabled = false;
+            }
+
+        }
+
+    }
 }
