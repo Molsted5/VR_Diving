@@ -9,7 +9,7 @@ public class ShowKeyBoard : MonoBehaviour
     public float distance = 0.5f;
     public float verticalOffset = -0.5f;
 
-    public Transform cameraPosition;
+    public Transform cameraTransform;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,11 +28,11 @@ public class ShowKeyBoard : MonoBehaviour
         NonNativeKeyboard.Instance.InputField = inputField;
         NonNativeKeyboard.Instance.PresentKeyboard( inputField.text );
 
-        Vector3 direction = cameraPosition.forward;
+        Vector3 direction = cameraTransform.forward;
         direction.y = 0;
         direction.Normalize();
 
-        Vector3 targetPosition = cameraPosition.position + direction * distance + new Vector3( 0, verticalOffset, 0 );
+        Vector3 targetPosition = cameraTransform.position + direction * distance + new Vector3( 0, verticalOffset, 0 );
         
         NonNativeKeyboard.Instance.RepositionKeyboard( targetPosition );
 
