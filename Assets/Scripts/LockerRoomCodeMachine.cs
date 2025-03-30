@@ -7,6 +7,8 @@ public class LockerRoomCodeMachine : MonoBehaviour
     public Image image;
     public Button button;
     public TMP_InputField inputField;
+    public GameObject keyPrefab;
+    public Transform keySpawnTransform;
 
     private bool puzzleSolved;
 
@@ -27,6 +29,7 @@ public class LockerRoomCodeMachine : MonoBehaviour
 
         if ( inputField.text == "code" ) {
             image.color = Color.green;
+            Instantiate( keyPrefab, keySpawnTransform.position, keySpawnTransform.rotation );
             puzzleSolved = true;
         } else {
             image.color = Color.yellow;
