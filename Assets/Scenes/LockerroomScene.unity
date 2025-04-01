@@ -1456,6 +1456,10 @@ PrefabInstance:
       propertyPath: m_EnableNearCasting
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3230120499096859418, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: sceneId
+      value: 1133268238
+      objectReference: {fileID: 0}
     - target: {fileID: 3639148551234328385, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       propertyPath: m_Enabled
       value: 1
