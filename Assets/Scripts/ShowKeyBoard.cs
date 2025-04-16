@@ -5,15 +5,16 @@ using Microsoft.MixedReality.Toolkit.Experimental.UI;
 public class ShowKeyBoard : MonoBehaviour
 {
     private TMP_InputField inputField;
+    
+    private Transform cameraTransform;
 
     public float distance = 0.5f;
     public float verticalOffset = -0.5f;
 
-    public Transform cameraTransform;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        cameraTransform = GameObject.FindGameObjectWithTag( "MainCamera" ).transform;
         inputField = GetComponent<TMP_InputField>();
         inputField.onSelect.AddListener( x => OpenKeyboard() );
     }

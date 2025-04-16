@@ -1,9 +1,12 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Door : MonoBehaviour
 {
     public List<Lock> locks;
+    public delegate void DoorOpenedDelegate();
+    public event DoorOpenedDelegate DoorOpenedEvent;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,17 +25,16 @@ public class Door : MonoBehaviour
 
     public void OnLockUnlocked( Lock unlockedLock ) {
         unlockedLock.unlockEvent -= OnLockUnlocked;
-        Debug.Log( $"{unlockedLock.name} has been unlocked!" );
+        print( $"{unlockedLock.name} has been unlocked!" );
 
         if( locks.TrueForAll( l => !l.locked ) ) {
-            Debug.Log( "All locks are unlocked! Door can now open." );
+            print( "All locks are unlocked! Door can now open." );
             OpenDoor(); 
         }
     }
 
     public void OpenDoor() {
-        Debug.Log( "The door is now open!" );
-        
-        
+        print( "The door is now open!" );
+        DoorOpenedEvent?.Invoke();
     }
 }
