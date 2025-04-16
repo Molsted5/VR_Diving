@@ -9,36 +9,63 @@ using System.Collections.Generic;
 public class Fabricator_Puzzle : MonoBehaviour
 {
     private bool Pin_activated;
-    public Button Button1;
-    public Button Button2;
-    public Button Button3;
-    public Button Button4;
-    public TMP_Text Textbox1;
+    private int sizeint = 20;
+
+    public GameObject fabricatorInterface;
+    public TMP_Text ActivationText;
+    public TMP_Text SizeText;
+    public Button add_btn;
+    public Button subtract_btn;
+    public Button print_btn;
+
+    public Transform snorkelspawn;
+    public GameObject snorkelprefab;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Pin_activated = GameObject.Find("Pincode_box").GetComponent<Sign_puzzle>().pin_activated;
-        Button1.enabled = false;
-        Button2.enabled = false;
-        Button3.enabled = false;
-        Button4.enabled = false;
-        Textbox1.enabled = true;
+        fabricatorInterface.SetActive(false);
+        ActivationText.enabled = true;
+        //SizeText.outlineWidth = 1f;
+        //SizeText.outlineColor = new Color(255, 255, 255, 255);
+        
+        add_btn.onClick.AddListener(add);
+        subtract_btn.onClick.AddListener(subtract);
+        print_btn.onClick.AddListener(print);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Pin_activated == true)
-        {
-            Button1.enabled = true;
-            Button2.enabled = true;
-            Button3.enabled = true;
-            Button4.enabled = true;
-            Textbox1.enabled = false;
-        }
-        ;
         
+        Pin_activated = GameObject.Find("Pincode_box").GetComponent<Sign_puzzle>().pin_activated;
+
+        if (Pin_activated == true)
+        {
+            ActivationText.enabled = false;
+            fabricatorInterface.SetActive(true);
+        };
+
+        
+        //Debug.Log(Pin_activated);
+        
+    }
+    void add()
+    {
+        sizeint++;
+        SizeText.text = sizeint.ToString();
+        Debug.Log("add pressed");
+    }
+    void subtract()
+    {
+       sizeint--;
+       SizeText.text = sizeint.ToString();
+        Debug.Log("subtract pressed");
+    }
+    void print()
+    {
+        Instantiate(snorkelprefab, snorkelspawn.position, snorkelspawn.rotation);
+        Debug.Log("print pressed");
     }
 }

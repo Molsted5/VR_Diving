@@ -5,6 +5,8 @@ using System.Collections;
 using UnityEngine.UI;
 using NUnit.Framework;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public class Sign_puzzle : MonoBehaviour
 {
@@ -14,18 +16,17 @@ public class Sign_puzzle : MonoBehaviour
     public Button Button3;
     public Button Button4;
 
-    private string Code = "UpHelpBoatOk";
-    private string Input;
-    private string sign;
+    private string _Code = "UpHelpBoatOk";
+    private string _Input;
     private int btncount;
-    public List<string> btncheck = new List<string>();
+    public List<string> _btncheck = new List<string>();
     public Boolean pin_activated = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        btncheck.Clear();
-        Input = "";
+        _btncheck.Clear();
+        _Input = "";
         Button1.onClick.AddListener(delegate { btninput("Up", Button1); });
         Button2.onClick.AddListener(delegate { btninput("Boat", Button2); });
         Button3.onClick.AddListener(delegate { btninput("Help", Button3); });
@@ -37,9 +38,15 @@ public class Sign_puzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (UnityEngine.Input.GetKeyDown("space"))
+        {
+            pin_activated = true;
+            Debug.Log("Space pressed");
+        }
+
         if(btncount == 4)
         {
-            if(Input == Code)
+            if(_Input == _Code)
             {
                 Debug.Log("Match");
                 Button1.image.color = Color.green;
@@ -48,8 +55,8 @@ public class Sign_puzzle : MonoBehaviour
                 Button4.image.color = Color.green;
                 pin_activated = true;
                 btncount = 0;
-                Input = "";
-                btncheck.Clear();
+                _Input = "";
+                _btncheck.Clear();
             }
             else
             {
@@ -59,29 +66,31 @@ public class Sign_puzzle : MonoBehaviour
                 Button3.image.color = Color.red;
                 Button4.image.color = Color.red;
                 btncount = 0;
-                Input = "";
-                btncheck.Clear();
+                _Input = "";
+                _btncheck.Clear();
             }
             
         };
+
+        //Debug.Log(pin_activated);
 
     }
 
     void btninput(string sign, Button mybutton)
     {
         
-        if (btncheck.Contains(sign))
+        if (_btncheck.Contains(sign))
         {
             Debug.Log("Already pressed");
         }
         else
         {
-            btncheck.Add(sign);
-            Input = Input + sign;
+            _btncheck.Add(sign);
+            _Input = _Input + sign;
             btncount++;
             mybutton.image.color = Color.blue;
-            Debug.Log(Input);
-            Debug.Log(Code);
+            Debug.Log(_Input);
+            Debug.Log(_Code);
         }   
     }
 }
