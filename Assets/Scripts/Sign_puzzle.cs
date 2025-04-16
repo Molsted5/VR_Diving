@@ -19,6 +19,7 @@ public class Sign_puzzle : MonoBehaviour
     private string sign;
     private int btncount;
     public List<string> btncheck = new List<string>();
+    public Boolean pin_activated = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -45,6 +46,7 @@ public class Sign_puzzle : MonoBehaviour
                 Button2.image.color = Color.green;
                 Button3.image.color = Color.green;
                 Button4.image.color = Color.green;
+                pin_activated = true;
                 btncount = 0;
                 Input = "";
                 btncheck.Clear();

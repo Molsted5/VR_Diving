@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 9167252935989621208}
   - component: {fileID: 687326311349947748}
   m_Layer: 0
-  m_Name: Simon says box
+  m_Name: Pincode_box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -302,7 +302,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 494, y: 197.4, z: 254.09998}
-  m_LocalScale: {x: 10, y: 35, z: 50}
+  m_LocalScale: {x: 0.40609473, y: 1.4213314, z: 2.0304735}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1211412601289789959}
@@ -669,7 +669,7 @@ GameObject:
   - component: {fileID: 1211412601289789959}
   - component: {fileID: 5697457977036876029}
   - component: {fileID: 1563988911248756859}
-  - component: {fileID: 1984525646465112131}
+  - component: {fileID: 5513552700983963040}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -747,7 +747,7 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 1
---- !u!114 &1984525646465112131
+--- !u!114 &5513552700983963040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -756,14 +756,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 4879530159838618828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1 &5235550811418930777
 GameObject:
   m_ObjectHideFlags: 0
