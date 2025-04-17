@@ -3,6 +3,7 @@ using UnityEngine;
 public class Lock : MonoBehaviour
 {
     public bool locked;
+    public bool keyUsed;
     public delegate void UnlockDelegate( Lock lockObject );
     public event UnlockDelegate unlockEvent;
     public Material material;
@@ -29,9 +30,13 @@ public class Lock : MonoBehaviour
     }
 
     private void OnTriggerEnter( Collider triggerCollider ) {
-        if( triggerCollider.transform.parent.CompareTag("Key") ) {
-            Destroy( triggerCollider.transform.parent.gameObject );
+        Transform key = triggerCollider.transform.parent;
+        Key keyScript = key.GetComponent<Key>();
+        if( key.CompareTag( "Key" ) && key.GetComponent<Key>().free ) {
+            keyScript.free = false;
+            Destroy( key.gameObject );
             Unlock();
         }
     }
+
 }
