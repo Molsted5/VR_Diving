@@ -19,6 +19,7 @@ public class Sign_puzzle : MonoBehaviour
     private string _Code = "UpHelpBoatOk";
     private string _Input;
     private int btncount;
+    private bool checkingcode;
     public List<string> _btncheck = new List<string>();
     public Boolean pin_activated = false;
 
@@ -31,8 +32,6 @@ public class Sign_puzzle : MonoBehaviour
         Button2.onClick.AddListener(delegate { btninput("Boat", Button2); });
         Button3.onClick.AddListener(delegate { btninput("Help", Button3); });
         Button4.onClick.AddListener(delegate { btninput("Ok", Button4); });
-        
-
     }
 
     // Update is called once per frame
@@ -44,36 +43,53 @@ public class Sign_puzzle : MonoBehaviour
             Debug.Log("Space pressed");
         }
 
-        if(btncount == 4)
+        if(btncount == 4 && !checkingcode)
         {
-            if(_Input == _Code)
-            {
-                Debug.Log("Match");
-                Button1.image.color = Color.green;
-                Button2.image.color = Color.green;
-                Button3.image.color = Color.green;
-                Button4.image.color = Color.green;
-                pin_activated = true;
-                btncount = 0;
-                _Input = "";
-                _btncheck.Clear();
-            }
-            else
-            {
-                Debug.Log("No match");
-                Button1.image.color = Color.red;
-                Button2.image.color = Color.red;
-                Button3.image.color = Color.red;
-                Button4.image.color = Color.red;
-                btncount = 0;
-                _Input = "";
-                _btncheck.Clear();
-            }
-            
+            checkingcode = true;
+            StartCoroutine(CheckCode());
         };
 
         //Debug.Log(pin_activated);
 
+    }
+
+    IEnumerator CheckCode()
+    {
+        if (_Input == _Code)
+        {
+            Debug.Log("Match");
+            Button1.image.color = Color.green;
+            Button2.image.color = Color.green;
+            Button3.image.color = Color.green;
+            Button4.image.color = Color.green;
+            pin_activated = true;
+            btncount = 0;
+            _Input = "";
+            _btncheck.Clear();
+        }
+        else
+        {
+            Debug.Log("No match");
+            Button1.image.color = Color.red;
+            Button2.image.color = Color.red;
+            Button3.image.color = Color.red;
+            Button4.image.color = Color.red;
+            btncount = 0;
+            _Input = "";
+            _btncheck.Clear();
+        }
+
+        Debug.Log("code checked");
+
+        yield return new WaitForSeconds(2);
+
+        Debug.Log("waited");
+
+        Button1.image.color = Color.white;
+        Button2.image.color = Color.white;
+        Button3.image.color = Color.white;
+        Button4.image.color = Color.white;
+        checkingcode = false;
     }
 
     void btninput(string sign, Button mybutton)

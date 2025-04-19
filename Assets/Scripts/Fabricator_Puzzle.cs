@@ -10,10 +10,13 @@ public class Fabricator_Puzzle : MonoBehaviour
 {
     private bool Pin_activated;
     private int sizeint = 20;
+    private float sizefloat = 0.2f;
+    private Vector3 scale = new Vector3(0.2f, 0.2f, 0.2f);
 
     public GameObject fabricatorInterface;
     public TMP_Text ActivationText;
     public TMP_Text SizeText;
+    public TMP_Text desciption;
     public Button add_btn;
     public Button subtract_btn;
     public Button print_btn;
@@ -38,33 +41,49 @@ public class Fabricator_Puzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         Pin_activated = GameObject.Find("Pincode_box").GetComponent<Sign_puzzle>().pin_activated;
 
         if (Pin_activated == true)
         {
             ActivationText.enabled = false;
             fabricatorInterface.SetActive(true);
-        };
-
-        
-        //Debug.Log(Pin_activated);
-        
+        }   
     }
     void add()
     {
-        sizeint++;
+        if(sizeint >= 45)
+        {
+            desciption.text = "Størrelse skal være mellem 15cm og 45cm";
+        }
+        else
+        {
+            desciption.text = "Indstil størrelse og print";
+            sizeint++;
+            sizefloat = sizeint / 100f;
+            scale = new Vector3(sizefloat, sizefloat, sizefloat);
+        }
         SizeText.text = sizeint.ToString();
         Debug.Log("add pressed");
     }
     void subtract()
     {
-       sizeint--;
-       SizeText.text = sizeint.ToString();
+        if (sizeint <= 15)
+        {
+            desciption.text = "Størrelse skal være mellem 15cm og 45cm";
+        }
+        else
+        {
+            desciption.text = "Indstil størrelse og print";
+            sizeint--;
+            sizefloat = sizeint / 100f;
+            scale = new Vector3(sizefloat, sizefloat, sizefloat);
+        }
+        SizeText.text = sizeint.ToString();
         Debug.Log("subtract pressed");
     }
     void print()
     {
+        snorkelprefab.transform.localScale = scale;
         Instantiate(snorkelprefab, snorkelspawn.position, snorkelspawn.rotation);
         Debug.Log("print pressed");
     }
