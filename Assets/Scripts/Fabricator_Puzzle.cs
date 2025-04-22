@@ -83,8 +83,8 @@ public class Fabricator_Puzzle : MonoBehaviour
     }
     void print()
     {
-        snorkelprefab.transform.localScale = scale;
-        Instantiate(snorkelprefab, snorkelspawn.position, snorkelspawn.rotation);
+        GameObject printedObject = Instantiate(snorkelprefab, snorkelspawn.position, snorkelspawn.rotation);
+        printedObject.transform.localScale = scale;
         Debug.Log("print pressed");
     }
 }

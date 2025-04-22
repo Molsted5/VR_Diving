@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 46, y: 60}
+  m_AnchoredPosition: {x: 46, y: 59}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1047099345663180980
@@ -92,14 +92,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -137.8333, y: 0, z: -101.27646, w: 0}
+  m_margin: {x: -276.43304, y: 0, z: -182.7254, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -394,11 +394,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5e7e1133e85ab419d3319ba7b9ebe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _AllSigns:
+  - Label: Help
+    Image: {fileID: 579196849, guid: 3bea5682547824348af933e8bc905ef4, type: 3}
+  - Label: Up
+    Image: {fileID: -1571116803, guid: 56565f89687327f43a388332baa92b7e, type: 3}
+  - Label: Boat
+    Image: {fileID: 949690060, guid: c3e04491ea3cdb34aa9e766285c646df, type: 3}
+  - Label: Ok
+    Image: {fileID: 207659436, guid: 2762ce89c681c294281fb11e10fd5577, type: 3}
+  - Label: Stop
+    Image: {fileID: 21300000, guid: 856b3e7a7d19d5448b36444d40362d6d, type: 3}
+  - Label: Stay with buddy
+    Image: {fileID: 21300000, guid: af1a593abab4573439c47dd6fadcd6bc, type: 3}
   Button1: {fileID: 2398894904603698316}
   Button2: {fileID: 6526813446040641490}
   Button3: {fileID: 529232148082470327}
   Button4: {fileID: 3668968139389736109}
-  btncheck: []
+  codeTextBox: {fileID: 1161942447070267120}
+  _btncheck: []
+  pin_activated: 0
+  buttonsset: 0
 --- !u!1 &3093040861808611154
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,6 +686,7 @@ GameObject:
   - component: {fileID: 5697457977036876029}
   - component: {fileID: 1563988911248756859}
   - component: {fileID: 5513552700983963040}
+  - component: {fileID: 5115665125782208242}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -754,7 +771,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4879530159838618828}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
   m_Name: 
@@ -766,6 +783,23 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+--- !u!114 &5115665125782208242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4879530159838618828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &5235550811418930777
 GameObject:
   m_ObjectHideFlags: 0
