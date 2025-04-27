@@ -7,6 +7,7 @@ public class Door : MonoBehaviour
     public List<Lock> locks;
     public delegate void DoorOpenedDelegate();
     public event DoorOpenedDelegate DoorOpenedEvent;
+    public int locksUnlocked;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,7 +26,9 @@ public class Door : MonoBehaviour
 
     public void OnLockUnlocked( Lock unlockedLock ) {
         unlockedLock.unlockEvent -= OnLockUnlocked;
-        print( $"{unlockedLock.name} has been unlocked!" );
+        //print( $"{unlockedLock.name} has been unlocked!" );
+        locksUnlocked++;
+
 
         if( locks.TrueForAll( l => !l.locked ) ) {
             print( "All locks are unlocked! Door can now open." );
