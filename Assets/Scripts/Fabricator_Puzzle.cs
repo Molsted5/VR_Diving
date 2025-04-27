@@ -59,7 +59,7 @@ public class Fabricator_Puzzle : MonoBehaviour
         {
             desciption.text = "Indstil størrelse og print";
             sizeint++;
-            sizefloat = sizeint / 100f;
+            sizefloat = (sizeint / 100f);
             scale = new Vector3(sizefloat, sizefloat, sizefloat);
         }
         SizeText.text = sizeint.ToString();
@@ -75,7 +75,7 @@ public class Fabricator_Puzzle : MonoBehaviour
         {
             desciption.text = "Indstil størrelse og print";
             sizeint--;
-            sizefloat = sizeint / 100f;
+            sizefloat = (sizeint / 100f);
             scale = new Vector3(sizefloat, sizefloat, sizefloat);
         }
         SizeText.text = sizeint.ToString();
