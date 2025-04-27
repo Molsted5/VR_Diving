@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Anchor
   - Key
+  - Water
+  - Sprit
+  - SaltWater
+  - Snorkel
   layers:
   - Default
   - TransparentFX
