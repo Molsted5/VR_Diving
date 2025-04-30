@@ -1,0 +1,5 @@
+D:/skole/VR_Diving/.utmp/RelWithDebInfo/2v3a115n/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/skole/VR_Diving/.utmp/RelWithDebInfo/2v3a115n/arm64-v8a/CMakeFiles/rebuild_cache.dir
+D:/skole/VR_Diving/.utmp/RelWithDebInfo/2v3a115n/arm64-v8a/GameActivity/CMakeFiles/game.dir
+D:/skole/VR_Diving/.utmp/RelWithDebInfo/2v3a115n/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+D:/skole/VR_Diving/.utmp/RelWithDebInfo/2v3a115n/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

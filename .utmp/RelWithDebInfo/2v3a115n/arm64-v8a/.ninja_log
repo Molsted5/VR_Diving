@@ -1,0 +1,10 @@
+# ninja log v5
+31	2545	7677386450761762	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	baf268b3d4fdd84
+24	2554	7677386450761762	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	bbf458503f0197a6
+15	2560	7677386450822007	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	376de6a91ba46bf4
+107	2565	7677386450953171	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	76fc1a99d9b800ff
+1	2578	7677386451113902	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	fa36d73ba09f8c26
+117	2583	7677386451162590	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	b699456350f7e88d
+97	2805	7677386453413764	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	d7f333985b88ae4c
+8	2883	7677386454175331	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	5f16a76699f30960
+2884	3029	7677386455676257	D:/skole/VR_Diving/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2v3a115n/obj/arm64-v8a/libgame.so	156cec59d74c7b28
