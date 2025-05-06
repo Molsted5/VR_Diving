@@ -15,8 +15,8 @@ public class DialogeDetector : MonoBehaviour
     private Transform keyDispenserTransform;
     private Transform fabricatorTransform;
     private Transform doorTransform;
-    //private Transform washerTransform;    <--- NEEDS FIX     uncomment
-    //private Transform gomTransform;    <--- NEEDS FIX     uncomment
+    private Transform washerTransform;
+    private Transform gomTransform;
     private Transform cameraTransform;
     private Coroutine deactivateUICoroutine;
 
@@ -24,8 +24,8 @@ public class DialogeDetector : MonoBehaviour
     bool lookingAtCodeMachinge = false;
     bool lookingAtFabricator = false;
     bool lookingAtDoor = false;
-    //bool lookingAtWasher = false;       <--- NEEDS FIX     uncomment
-    //bool lookingAtGOM = false;       <--- NEEDS FIX     uncomment
+    bool lookingAtWasher = false;
+    bool lookingAtGOM = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -34,8 +34,8 @@ public class DialogeDetector : MonoBehaviour
         fabricatorTransform = GameObject.Find("Fabricator").transform;
         keyDispenserTransform = GameObject.Find( "KeyDispenser" ).transform;
         doorTransform = GameObject.Find("Door").transform;
-        //washerTransform = GameObject.Find(" !!washer name!! ").transform;   <--- NEEDS FIX      uncomment og GO navn
-        //GMOTransform = GameObject.Find(" !!GOM name!! ").transform;   <--- NEEDS FIX      uncomment og GO navn
+        washerTransform = GameObject.Find("WashingStation").transform;
+        gomTransform = GameObject.Find("computer").transform;
         cameraTransform = GameObject.Find( "Main Camera" ).transform;
 
         if( dialogeUI != null ) {
@@ -70,23 +70,23 @@ public class DialogeDetector : MonoBehaviour
                 lookingAtDoor = true;
             }
         }
-        /*if ((washerTransform.position - cameraTransform.position).magnitude < 2)                                      <--- NEEDS FIX      uncomment og retning på forward
+        if ((washerTransform.position - cameraTransform.position).magnitude < 2)                                    
         {
             if (Mathf.Abs(Vector3.Angle(washerTransform.forward, cameraTransform.forward)) < dialogeAngleDetection)
             {
                 ActivateUIWithCoroutine();
                 lookingAtWasher = true;
             }
-        }*/
+        }
 
-        /*if ((gomTransform.position - cameraTransform.position).magnitude < 2)                                      <--- NEEDS FIX      uncomment og retning på forward
+        if ((gomTransform.position - cameraTransform.position).magnitude < 2)                             
        {
            if (Mathf.Abs(Vector3.Angle(gomTransform.forward, cameraTransform.forward)) < dialogeAngleDetection)
            {
                ActivateUIWithCoroutine();
                lookingAtGOM = true;
            }
-       }*/
+       }
 
     }
 
@@ -122,15 +122,15 @@ public class DialogeDetector : MonoBehaviour
                     uiText.text = "Just one more key and I will be safe!..";
                 }
             }
-            /*if (lookingAtWasher)                                                                                                                          <--- NEEDS FIX      uncomment
+            if (lookingAtWasher)                                                                                                             
             {
-                uiText.text = "Thats Guide-o-Matic, a great tool to get some knowledge on the fly…";
-            }*/
+                uiText.text = "Thats weird, the cannisters for the cleaning station are missing? It is Usually Jeremys job to make sure they are refilled";
+            }
 
-            /*if (lookingAtGOM)                                                                                                                          <--- NEEDS FIX      uncomment
+            if (lookingAtGOM)                                                                                     
            {
-               uiText.text = "Thats weird, the cannisters for the cleaning station are missing? It is Usually Jeremys job to make sure they are refilled";
-           }*/
+               uiText.text = "Thats Guide-o-Matic, a great tool to get some knowledge on the fly…";
+           }
 
 
             // Stop any existing coroutine to prevent overlapping timers
@@ -153,8 +153,8 @@ public class DialogeDetector : MonoBehaviour
             lookingAtCodeMachinge = false;
             lookingAtFabricator = false;
             lookingAtDoor = false;
-            //lookingAtWasher = false;          <--- NEEDS FIX      uncomment
-            //lookingAtGOM = false;             <--- NEEDS FIX      uncomment
+            lookingAtWasher = false;
+            lookingAtGOM = false;
             dialogeUI.SetActive( false );
         }
 

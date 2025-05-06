@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3e5b465fca390634484be4ce57a3e1fb, type: 2}
     - target: {fileID: 919132149155446097, guid: 6350b82dffba02440ab8b9ddba62ef20, type: 3}
       propertyPath: m_Name
-      value: Bottle_Vand 1
+      value: Bottle_Water
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6350b82dffba02440ab8b9ddba62ef20, type: 3}
       propertyPath: m_TagString
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_StartingInteractionStrengthFilters: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
