@@ -1,4 +1,4 @@
-using Mono.Cecil.Cil;
+
 using System;
 using System.Collections;
 using TMPro;
@@ -67,7 +67,7 @@ public class DialogeDetector : MonoBehaviour
     void Update()
     {
         
-        if ( ( keyDispenserTransform.position - cameraTransform.position ).magnitude < 3 ) {
+        if ( ( keyDispenserTransform.position - cameraTransform.position ).magnitude < 4 ) {
             if ( Mathf.Abs( Vector3.Angle( -keyDispenserTransform.forward, cameraTransform.forward ) ) < dialogeAngleDetection ) {
                 ActivateUIWithCoroutine();
                 lookingAtCodeMachinge = true;
@@ -98,7 +98,7 @@ public class DialogeDetector : MonoBehaviour
             }
         }
 
-        if ((gomTransform.position - cameraTransform.position).magnitude < 3)                             
+        if ((gomTransform.position - cameraTransform.position).magnitude < 4)                             
        {
            if (Mathf.Abs(Vector3.Angle(gomTransform.forward, cameraTransform.forward)) < dialogeAngleDetection)
            {
