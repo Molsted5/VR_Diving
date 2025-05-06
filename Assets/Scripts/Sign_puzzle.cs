@@ -135,10 +135,10 @@ public class Sign_puzzle : MonoBehaviour
         
         if(pin_activated == true)
         {
-            Button1.enabled = false;
-            Button2.enabled = false;
-            Button3.enabled = false;
-            Button4.enabled = false;
+            Button1.gameObject.SetActive(false);
+            Button2.gameObject.SetActive(false);
+            Button3.gameObject.SetActive(false);
+            Button4.gameObject.SetActive(false);
             descriptionText.text = "Fabricator has been activated";
             codeTextBox.text = "";
         }

@@ -3496,12 +3496,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7539593458241071383, guid: 280f2e59c13d3fe419a895bcf52023a6, type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7539593458241071383, guid: 280f2e59c13d3fe419a895bcf52023a6, type: 3}
       propertyPath: field of view
       value: 60.000004
       objectReference: {fileID: 0}
     - target: {fileID: 7539593458241071383, guid: 280f2e59c13d3fe419a895bcf52023a6, type: 3}
       propertyPath: m_FocalLength
       value: 20.78461
+      objectReference: {fileID: 0}
+    - target: {fileID: 7539593458241071383, guid: 280f2e59c13d3fe419a895bcf52023a6, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.36078432
+      objectReference: {fileID: 0}
+    - target: {fileID: 7539593458241071383, guid: 280f2e59c13d3fe419a895bcf52023a6, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.4745098
       objectReference: {fileID: 0}
     - target: {fileID: 7539593458241071383, guid: 280f2e59c13d3fe419a895bcf52023a6, type: 3}
       propertyPath: m_projectionMatrixMode
