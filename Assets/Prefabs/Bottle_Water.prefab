@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6350b82dffba02440ab8b9ddba62ef20, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.66
+      value: 41.452
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6350b82dffba02440ab8b9ddba62ef20, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6350b82dffba02440ab8b9ddba62ef20, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 42.57
+      value: 42.876
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6350b82dffba02440ab8b9ddba62ef20, type: 3}
       propertyPath: m_LocalRotation.w
@@ -63,7 +63,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6350b82dffba02440ab8b9ddba62ef20, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 3e5b465fca390634484be4ce57a3e1fb, type: 2}
+      objectReference: {fileID: 2100000, guid: 07ef523d3dcd15248934baa4ce1ae390, type: 2}
     - target: {fileID: 919132149155446097, guid: 6350b82dffba02440ab8b9ddba62ef20, type: 3}
       propertyPath: m_Name
       value: Bottle_Water
@@ -117,7 +117,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0

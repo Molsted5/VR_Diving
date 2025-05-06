@@ -32,7 +32,7 @@ public class LockerRoomCodeMachine : MonoBehaviour
             Instantiate( keyPrefab, keySpawnTransform.position, keySpawnTransform.rotation );
             puzzleSolved = true;
         } else {
-            image.color = Color.yellow;
+            image.color = Color.red;
         }
         
     }
