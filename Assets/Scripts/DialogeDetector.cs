@@ -8,6 +8,7 @@ public class DialogeDetector : MonoBehaviour
 {
     public float dialogeAngleDetection = 75f;
     public GameObject dialogeUI;
+    public Canvas dialogcanvas;
     public Door door;
     public TextMeshProUGUI uiText;
     public float uiActiveDuration = 6f;
@@ -97,21 +98,21 @@ public class DialogeDetector : MonoBehaviour
             {
                 uiText.text = "If I know Jeremy right, his password is always the service pressure in PSI followed by the capacity in cubic meters of his air tank…";
                 dialogeUI.transform.position = new Vector3(41.57f, 2.35f, 27.08f);
-                dialogeUI.transform.rotation = new Quaternion(0f, -58.814f, 0f, 0f);
+                dialogeUI.transform.rotation = Quaternion.Euler(0f, -58.814f, 0f);
             }
             if (justSpawned)
             {
                 uiText.text = "I'M LOCKED OUT!?.." +
                     "I need figure out how to get inside the base before I run out of air…" +
                     "Maybe Jeremy hid some spare keys last time he was here?..";
-                dialogeUI.transform.position = new Vector3(49.35f, 1.7f, 31.84f);
-                dialogeUI.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+                dialogeUI.transform.position = new Vector3(50.7f, 1.75f, 33f);
+                dialogeUI.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
             }
             if (lookingAtFabricator)
             {
                 uiText.text = "The Fabricator, Jeremy can never decide which size snorkel he likes so he keeps making new ones. It seems to be turned off, maybe I can power it on somehow?..";
                 dialogeUI.transform.position = new Vector3(44.85f, 2.29f, 39.72f);
-                dialogeUI.transform.rotation = new Quaternion(0f, -138.691f, 0f, 0f);
+                dialogeUI.transform.rotation = Quaternion.Euler(0f, -138.691f, 0f);
             }
             if(lookingAtDoor)
             {
@@ -119,33 +120,33 @@ public class DialogeDetector : MonoBehaviour
                 {
                     uiText.text = "I need to find the keys for the door...";
                     dialogeUI.transform.position = new Vector3(46.38f, 1.88f, 33.25f);
-                    dialogeUI.transform.rotation = new Quaternion(0f, 39.926f, 0f, 0f);
+                    dialogeUI.transform.rotation = Quaternion.Euler(0f, 39.926f, 0f);
                 }
                 if (door.locksUnlocked == 1)
                 {
                     uiText.text = "Thats one key down, two more to go...";
                     dialogeUI.transform.position = new Vector3(46.38f, 1.88f, 33.25f);
-                    dialogeUI.transform.rotation = new Quaternion(0f, 39.926f, 0f, 0f);
+                    dialogeUI.transform.rotation = Quaternion.Euler(0f, 39.926f, 0f);
                 }
                 if (door.locksUnlocked == 2)
                 {
                     uiText.text = "Just one more key and I will be safe!..";
                     dialogeUI.transform.position = new Vector3(46.38f, 1.88f, 33.25f);
-                    dialogeUI.transform.rotation = new Quaternion(0f, 39.926f, 0f, 0f);
+                    dialogeUI.transform.rotation = Quaternion.Euler(0f, 39.926f, 0f);
                 }
             }
             if (lookingAtWasher)                                                                                                             
             {
                 uiText.text = "Thats weird, the cannisters for the cleaning station are missing? It is usually Jeremys job to make sure they are refilled";
                 dialogeUI.transform.position = new Vector3(41.905f, 2.29f, 39.577f);
-                dialogeUI.transform.rotation = new Quaternion(0f, -138.691f, 0f, 0f);
+                dialogeUI.transform.rotation = Quaternion.Euler(0f, -138.691f, 0f);
             }
 
             if (lookingAtGOM)                                                                                     
            {
                uiText.text = "That's the Guide-o-Matic, a great tool to get some knowledge on the fly…";
                 dialogeUI.transform.position = new Vector3(47.8f, 2.29f, 31.34f);
-                dialogeUI.transform.rotation = new Quaternion(0f, -75.814f, 0f, 0f);
+                dialogeUI.transform.rotation = Quaternion.Euler(0f, -75.814f, 0f);
             }
 
 
