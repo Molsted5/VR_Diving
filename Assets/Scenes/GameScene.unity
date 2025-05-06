@@ -7677,6 +7677,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Environment
       objectReference: {fileID: 0}
+    - target: {fileID: 805291380459472092, guid: cd50c7206fd325c4284ea1463096d116, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 847858964271880711, guid: cd50c7206fd325c4284ea1463096d116, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -7815,15 +7819,15 @@ PrefabInstance:
       objectReference: {fileID: 1030635433}
     - target: {fileID: 2639243081292854664, guid: cd50c7206fd325c4284ea1463096d116, type: 3}
       propertyPath: m_Center.x
-      value: 107.77
+      value: 40.84
       objectReference: {fileID: 0}
     - target: {fileID: 2639243081292854664, guid: cd50c7206fd325c4284ea1463096d116, type: 3}
       propertyPath: m_Center.y
-      value: 0.12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2639243081292854664, guid: cd50c7206fd325c4284ea1463096d116, type: 3}
       propertyPath: m_Center.z
-      value: 37.59
+      value: 41.15
       objectReference: {fileID: 0}
     - target: {fileID: 2706314090441666509, guid: cd50c7206fd325c4284ea1463096d116, type: 3}
       propertyPath: m_Mesh
@@ -10938,7 +10942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674425807137201057, guid: 280f2e59c13d3fe419a895bcf52023a6, type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8717258972911989196, guid: 280f2e59c13d3fe419a895bcf52023a6, type: 3}
       propertyPath: m_RequestedTrackingOriginMode
@@ -11640,10 +11644,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3143590373222265563, guid: d27153286c2170e4e8333190d1750f0e, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 07ef523d3dcd15248934baa4ce1ae390, type: 2}
     - target: {fileID: 3504005817280992014, guid: d27153286c2170e4e8333190d1750f0e, type: 3}
       propertyPath: m_Name
       value: Bottle_Vand
@@ -11745,6 +11745,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6112991491247904232, guid: e1726d7e874ccbd4abf4b5674af2d12e, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241636012811263884, guid: e1726d7e874ccbd4abf4b5674af2d12e, type: 3}
+      propertyPath: m_UseDynamicAttach
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6512282245459640743, guid: e1726d7e874ccbd4abf4b5674af2d12e, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -11826,6 +11834,10 @@ PrefabInstance:
     - target: {fileID: 1326345566353408057, guid: 90959cacbbca24e4cab641a5e3726edb, type: 3}
       propertyPath: m_Name
       value: PreassureTank
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766228105278029801, guid: 90959cacbbca24e4cab641a5e3726edb, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7941349865423696535, guid: 90959cacbbca24e4cab641a5e3726edb, type: 3}
       propertyPath: m_LocalPosition.x
