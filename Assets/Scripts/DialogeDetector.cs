@@ -104,7 +104,7 @@ public class DialogeDetector : MonoBehaviour
                 uiText.text = "I'M LOCKED OUT!?.." +
                     "I need figure out how to get inside the base before I run out of air…" +
                     "Maybe Jeremy hid some spare keys last time he was here?..";
-                dialogeUI.transform.position = new Vector3(50.7f, 1.75f, 33f);
+                dialogeUI.transform.position = new Vector3(50.7f, 1.9f, 33f);
                 dialogeUI.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
             }
             if (lookingAtFabricator)
