@@ -121,10 +121,6 @@ public class Sign_puzzle : MonoBehaviour
             Button3.image.color = Color.green;
             Button4.image.color = Color.green;
             pin_activated = true;
-            btncount = 0;
-            _Input = "";
-            _btncheck.Clear();
-            RandomizeButtons();
         }
         else
         {
@@ -133,10 +129,6 @@ public class Sign_puzzle : MonoBehaviour
             Button2.image.color = Color.red;
             Button3.image.color = Color.red;
             Button4.image.color = Color.red;
-            btncount = 0;
-            _Input = "";
-            _btncheck.Clear();
-            RandomizeButtons();
         }
 
         yield return new WaitForSeconds(1.5f);
@@ -157,6 +149,10 @@ public class Sign_puzzle : MonoBehaviour
             Button3.image.color = Color.white;
             Button4.image.color = Color.white;
             checkingcode = false;
+            btncount = 0;
+            _Input = "";
+            _btncheck.Clear();
+            RandomizeButtons();
         }
     }
 
