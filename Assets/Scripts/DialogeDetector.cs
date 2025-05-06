@@ -8,7 +8,6 @@ public class DialogeDetector : MonoBehaviour
 {
     public float dialogeAngleDetection = 75f;
     public GameObject dialogeUI;
-    public Canvas dialogcanvas;
     public Door door;
     public TextMeshProUGUI uiText;
     public float uiActiveDuration = 6f;
