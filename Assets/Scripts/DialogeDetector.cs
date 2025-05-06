@@ -97,7 +97,7 @@ public class DialogeDetector : MonoBehaviour
             {
                 uiText.text = "If I know Jeremy right, his password is always the service pressure in PSI followed by the capacity in cubic meters of his air tank…";
                 dialogeUI.transform.position = new Vector3(41f, 2.40f, 26.5f);
-                dialogeUI.transform.rotation = Quaternion.Euler(0f, -58.814f, 0f);
+                dialogeUI.transform.localRotation = Quaternion.Euler(0f, -58.814f, 0f);
             }
             if (justSpawned)
             {
@@ -105,13 +105,13 @@ public class DialogeDetector : MonoBehaviour
                     "I need figure out how to get inside the base before I run out of air…" +
                     "Maybe Jeremy hid some spare keys last time he was here?..";
                 dialogeUI.transform.position = new Vector3(50.7f, 1.9f, 33f);
-                dialogeUI.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
+                dialogeUI.transform.localRotation = Quaternion.Euler(0f, -90f, 0f);
             }
             if (lookingAtFabricator)
             {
                 uiText.text = "The Fabricator, Jeremy can never decide which size snorkel he likes so he keeps making new ones. It seems to be turned off, maybe I can power it on somehow?..";
                 dialogeUI.transform.position = new Vector3(44.15f, 2.29f, 39.72f);
-                dialogeUI.transform.rotation = Quaternion.Euler(0f, -138.691f, 0f);
+                dialogeUI.transform.localRotation = Quaternion.Euler(0f, -138.691f, 0f);
             }
             if(lookingAtDoor)
             {
@@ -119,33 +119,33 @@ public class DialogeDetector : MonoBehaviour
                 {
                     uiText.text = "I need to find the keys for the door...";
                     dialogeUI.transform.position = new Vector3(44.05f, 2.511f, 36.77f);
-                    dialogeUI.transform.rotation = Quaternion.Euler(0f, -10.256f, 0f);
+                    dialogeUI.transform.localRotation = Quaternion.Euler(0f, -10.256f, 0f);
                 }
                 if (door.locksUnlocked == 1)
                 {
                     uiText.text = "Thats one key down, two more to go...";
                     dialogeUI.transform.position = new Vector3(44.05f, 2.29f, 33f);
-                    dialogeUI.transform.rotation = Quaternion.Euler(0f, 64.635f, 0f);
+                    dialogeUI.transform.localRotation = Quaternion.Euler(0f, 64.635f, 0f);
                 }
                 if (door.locksUnlocked == 2)
                 {
                     uiText.text = "Just one more key and I will be safe!..";
                     dialogeUI.transform.position = new Vector3(44.05f, 2.29f, 33f);
-                    dialogeUI.transform.rotation = Quaternion.Euler(0f, 64.635f, 0f);
+                    dialogeUI.transform.localRotation = Quaternion.Euler(0f, 64.635f, 0f);
                 }
             }
             if (lookingAtWasher)                                                                                                             
             {
                 uiText.text = "Thats weird, the cannisters for the cleaning station are missing? It is usually Jeremys job to make sure they are refilled";
                 dialogeUI.transform.position = new Vector3(40.871f, 2.511f, 36.572f);
-                dialogeUI.transform.rotation = Quaternion.Euler(0f, -10.256f, 0f);
+                dialogeUI.transform.localRotation = Quaternion.Euler(0f, -10.256f, 0f);
             }
 
             if (lookingAtGOM)                                                                                     
            {
                uiText.text = "That's the Guide-o-Matic, a great tool to get some knowledge on the fly…";
                 dialogeUI.transform.position = new Vector3(44.16f, 2.29f, 31.14f);
-                dialogeUI.transform.rotation = Quaternion.Euler(0f, 64.635f, 0f);
+                dialogeUI.transform.localRotation = Quaternion.Euler(0f, 64.635f, 0f);
             }
 
 
