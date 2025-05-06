@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6350b82dffba02440ab8b9ddba62ef20, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 42.308
+      value: 42.43
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6350b82dffba02440ab8b9ddba62ef20, type: 3}
       propertyPath: m_LocalPosition.y
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  m_FarAttachMode: 0
+  m_FarAttachMode: 1
 --- !u!114 &750193110664497529
 MonoBehaviour:
   m_ObjectHideFlags: 0

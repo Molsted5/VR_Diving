@@ -235,7 +235,7 @@ Transform:
   m_GameObject: {fileID: 5180632573104040137}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -6.9849193e-10, y: 1.4292006, z: 0.0000000023283064}
+  m_LocalPosition: {x: -6.9849193e-10, y: 1.25, z: 0.0000000023283064}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -316,7 +316,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2534964839176971238, guid: 9ddd99e9e23fba044a36ecafa2c42f85, type: 3}
 --- !u!54 &6112991491247904232
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  m_FarAttachMode: 0
+  m_FarAttachMode: 1
 --- !u!1 &7961629112270522234
 GameObject:
   m_ObjectHideFlags: 0
