@@ -96,7 +96,7 @@ public class DialogeDetector : MonoBehaviour
             if (lookingAtCodeMachinge)
             {
                 uiText.text = "If I know Jeremy right, his password is always the service pressure in PSI followed by the capacity in cubic meters of his air tank…";
-                dialogeUI.transform.position = new Vector3(41.57f, 2.35f, 27.08f);
+                dialogeUI.transform.position = new Vector3(41f, 2.40f, 26.5f);
                 dialogeUI.transform.rotation = Quaternion.Euler(0f, -58.814f, 0f);
             }
             if (justSpawned)
