@@ -10,7 +10,7 @@ public class DialogeDetector : MonoBehaviour
     public GameObject dialogeUI;
     public Door door;
     public TextMeshProUGUI uiText;
-    public float uiActiveDuration = 3f;
+    public float uiActiveDuration = 6f;
 
     private Transform keyDispenserTransform;
     private Transform fabricatorTransform;
@@ -48,13 +48,13 @@ public class DialogeDetector : MonoBehaviour
     void Update()
     {
         
-        if ( ( keyDispenserTransform.position - cameraTransform.position ).magnitude < 2 ) {
+        if ( ( keyDispenserTransform.position - cameraTransform.position ).magnitude < 3 ) {
             if ( Mathf.Abs( Vector3.Angle( -keyDispenserTransform.forward, cameraTransform.forward ) ) < dialogeAngleDetection ) {
                 ActivateUIWithCoroutine();
                 lookingAtCodeMachinge = true;
             }
         }
-        if ((fabricatorTransform.position - cameraTransform.position).magnitude < 2)
+        if ((fabricatorTransform.position - cameraTransform.position).magnitude < 3)
         {
             if (Mathf.Abs(Vector3.Angle(fabricatorTransform.right, cameraTransform.forward)) < dialogeAngleDetection)
             {
@@ -62,7 +62,7 @@ public class DialogeDetector : MonoBehaviour
                 lookingAtFabricator = true;
             }
         }
-        if ((doorTransform.position - cameraTransform.position).magnitude < 2)
+        if ((doorTransform.position - cameraTransform.position).magnitude < 3)
         {
             if (Mathf.Abs(Vector3.Angle(doorTransform.forward, cameraTransform.forward)) < dialogeAngleDetection)
             {
@@ -70,7 +70,7 @@ public class DialogeDetector : MonoBehaviour
                 lookingAtDoor = true;
             }
         }
-        if ((washerTransform.position - cameraTransform.position).magnitude < 2)                                    
+        if ((washerTransform.position - cameraTransform.position).magnitude < 3)                                    
         {
             if (Mathf.Abs(Vector3.Angle(washerTransform.forward, cameraTransform.forward)) < dialogeAngleDetection)
             {
@@ -79,7 +79,7 @@ public class DialogeDetector : MonoBehaviour
             }
         }
 
-        if ((gomTransform.position - cameraTransform.position).magnitude < 2)                             
+        if ((gomTransform.position - cameraTransform.position).magnitude < 3)                             
        {
            if (Mathf.Abs(Vector3.Angle(gomTransform.forward, cameraTransform.forward)) < dialogeAngleDetection)
            {
@@ -95,11 +95,11 @@ public class DialogeDetector : MonoBehaviour
             dialogeUI.SetActive( true ); // Activate the UI
             if (lookingAtCodeMachinge)
             {
-                uiText.text = "If I know Jeremy right, his password is always the service pressure followed by the capacity of his air tank…";
+                uiText.text = "If I know Jeremy right, his password is always the service pressure in PSI followed by the capacity in cubic meters of his air tank…";
             }
             if (justSpawned)
             {
-                uiText.text = "IM LOCKED OUT!?.." +
+                uiText.text = "I'M LOCKED OUT!?.." +
                     "I need figure out how to get inside the base before I run out of air…" +
                     "Maybe Jeremy hid some spare keys last time he was here?..";
             }
@@ -124,12 +124,12 @@ public class DialogeDetector : MonoBehaviour
             }
             if (lookingAtWasher)                                                                                                             
             {
-                uiText.text = "Thats weird, the cannisters for the cleaning station are missing? It is Usually Jeremys job to make sure they are refilled";
+                uiText.text = "Thats weird, the cannisters for the cleaning station are missing? It is usually Jeremys job to make sure they are refilled";
             }
 
             if (lookingAtGOM)                                                                                     
            {
-               uiText.text = "Thats Guide-o-Matic, a great tool to get some knowledge on the fly…";
+               uiText.text = "That's the Guide-o-Matic, a great tool to get some knowledge on the fly…";
            }
 
 

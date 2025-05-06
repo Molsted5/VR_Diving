@@ -27,6 +27,7 @@ public class Sign_puzzle : MonoBehaviour
     public Button Button4;
 
     public TMP_Text codeTextBox;
+    public TMP_Text descriptionText;
     private string _Code;
     private string _Input;
     private int btncount;
@@ -90,7 +91,7 @@ public class Sign_puzzle : MonoBehaviour
         _Code = string.Join("", _newCode);
 
         //Set visible text to the same as the code but with spaces
-        codeTextBox.text = string.Join(", ", _newCode);
+        codeTextBox.text = "Code: " + string.Join(", ", _newCode);
 
         //Set the booleans
         buttonsset = true;
@@ -139,12 +140,24 @@ public class Sign_puzzle : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1.5f);
-
-        Button1.image.color = Color.white;
-        Button2.image.color = Color.white;
-        Button3.image.color = Color.white;
-        Button4.image.color = Color.white;
-        checkingcode = false;
+        
+        if(pin_activated == true)
+        {
+            Button1.enabled = false;
+            Button2.enabled = false;
+            Button3.enabled = false;
+            Button4.enabled = false;
+            descriptionText.text = "Fabricator has been activated";
+            codeTextBox.text = "";
+        }
+        else
+        {
+            Button1.image.color = Color.white;
+            Button2.image.color = Color.white;
+            Button3.image.color = Color.white;
+            Button4.image.color = Color.white;
+            checkingcode = false;
+        }
     }
 
     //Function called when a button is clicked. Makes sure every button can only be pressed once and adds that buttons label to _Input;

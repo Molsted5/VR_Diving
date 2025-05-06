@@ -62,7 +62,7 @@ public class Fabricator_Puzzle : MonoBehaviour
             sizefloat = (sizeint / 100f);
             scale = new Vector3(sizefloat, sizefloat, sizefloat);
         }
-        SizeText.text = sizeint.ToString();
+        SizeText.text = sizeint.ToString() + " cm";
         Debug.Log("add pressed");
     }
     void subtract()
