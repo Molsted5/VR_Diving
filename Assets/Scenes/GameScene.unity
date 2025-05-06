@@ -2151,6 +2151,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2639243081292854664, guid: cd50c7206fd325c4284ea1463096d116, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2639243081292854664, guid: cd50c7206fd325c4284ea1463096d116, type: 3}
       propertyPath: m_Center.x
       value: 40.84
       objectReference: {fileID: 0}
