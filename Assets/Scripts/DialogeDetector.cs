@@ -95,7 +95,7 @@ public class DialogeDetector : MonoBehaviour
             dialogeUI.SetActive( true ); // Activate the UI
             if (lookingAtCodeMachinge)
             {
-                uiText.text = "If I know Jeremy right, his password is always the service pressure followed by the capacity of his air tank…";
+                uiText.text = "If I know Jeremy right, his password is always the service pressure in PSI followed by the capacity in cubic meters of his air tank…";
             }
             if (justSpawned)
             {
