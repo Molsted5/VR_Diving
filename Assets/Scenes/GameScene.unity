@@ -482,7 +482,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  m_FarAttachMode: 0
+  m_FarAttachMode: 1
 --- !u!54 &175442085
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1647,7 +1647,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  m_FarAttachMode: 0
+  m_FarAttachMode: 1
 --- !u!54 &589037128
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3405,7 +3405,11 @@ PrefabInstance:
       objectReference: {fileID: 2056355668}
     - target: {fileID: 4529825960591389434, guid: 280f2e59c13d3fe419a895bcf52023a6, type: 3}
       propertyPath: m_Height
-      value: 1.36144
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529825960591389434, guid: 280f2e59c13d3fe419a895bcf52023a6, type: 3}
+      propertyPath: m_Center.y
+      value: 1.33
       objectReference: {fileID: 0}
     - target: {fileID: 7402147834609628763, guid: 280f2e59c13d3fe419a895bcf52023a6, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3505,7 +3509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674425807137201057, guid: 280f2e59c13d3fe419a895bcf52023a6, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8717258972911989196, guid: 280f2e59c13d3fe419a895bcf52023a6, type: 3}
       propertyPath: m_RequestedTrackingOriginMode
