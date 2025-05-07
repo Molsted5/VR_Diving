@@ -458,6 +458,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2df7d8136c746304eb884906fdc99524, type: 3}
+--- !u!1 &48768837 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6392842654847665912, guid: 2df7d8136c746304eb884906fdc99524, type: 3}
+  m_PrefabInstance: {fileID: 48768832}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &82238770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1986,6 +1991,16 @@ CapsuleCollider:
   m_Height: 0.27888203
   m_Direction: 1
   m_Center: {x: 0, y: 0.13944101, z: 0}
+--- !u!1 &622820056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 977760512258604915, guid: 2df7d8136c746304eb884906fdc99524, type: 3}
+  m_PrefabInstance: {fileID: 48768832}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &736968669 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 121392824592627944, guid: 2df7d8136c746304eb884906fdc99524, type: 3}
+  m_PrefabInstance: {fileID: 48768832}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &748651349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1995,9 +2010,49 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 687326311349947748, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
+      propertyPath: cable
+      value: 
+      objectReference: {fileID: 48768837}
+    - target: {fileID: 687326311349947748, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
+      propertyPath: cableColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 687326311349947748, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
+      propertyPath: cableColor.g
+      value: 0.983996
+      objectReference: {fileID: 0}
+    - target: {fileID: 687326311349947748, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
+      propertyPath: cableColor.r
+      value: 0.9103774
+      objectReference: {fileID: 0}
+    - target: {fileID: 687326311349947748, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
       propertyPath: descriptionText
       value: 
       objectReference: {fileID: 748651350}
+    - target: {fileID: 687326311349947748, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
+      propertyPath: cables.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 687326311349947748, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
+      propertyPath: 'cables.Array.data[0]'
+      value: 
+      objectReference: {fileID: 48768837}
+    - target: {fileID: 687326311349947748, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
+      propertyPath: 'cables.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1732821962}
+    - target: {fileID: 687326311349947748, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
+      propertyPath: 'cables.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1325352844}
+    - target: {fileID: 687326311349947748, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
+      propertyPath: 'cables.Array.data[3]'
+      value: 
+      objectReference: {fileID: 622820056}
+    - target: {fileID: 687326311349947748, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
+      propertyPath: 'cables.Array.data[4]'
+      value: 
+      objectReference: {fileID: 736968669}
     - target: {fileID: 2125080607842423872, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
       propertyPath: m_Name
       value: Pincode_box
@@ -2531,6 +2586,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250726833}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1325352844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2809154093593990841, guid: 2df7d8136c746304eb884906fdc99524, type: 3}
+  m_PrefabInstance: {fileID: 48768832}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1375627870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8392960449875058431, guid: 2a03044a770875448aa4688f14c0709f, type: 3}
@@ -3910,6 +3970,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9db93aa9822297547bc7318516627958, type: 3}
+--- !u!1 &1732821962 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2188753604059879643, guid: 2df7d8136c746304eb884906fdc99524, type: 3}
+  m_PrefabInstance: {fileID: 48768832}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1827213527
 PrefabInstance:
   m_ObjectHideFlags: 0

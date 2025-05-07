@@ -36,6 +36,9 @@ public class Sign_puzzle : MonoBehaviour
     public Boolean pin_activated = false;
     public Boolean buttonsset = false;
 
+    public GameObject[] cables;
+    public Color cableColor;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -141,6 +144,9 @@ public class Sign_puzzle : MonoBehaviour
             Button4.gameObject.SetActive(false);
             descriptionText.text = "Fabricator has been activated";
             codeTextBox.text = "";
+            foreach( GameObject cable in cables ) {
+                cable.GetComponent<Renderer>().material.color = cableColor;
+            }
         }
         else
         {
