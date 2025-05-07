@@ -27,7 +27,7 @@ public class LockerRoomCodeMachine : MonoBehaviour
     public void CheckLockerRoomCode() {
         if ( puzzleSolved ) return;
 
-        if ( inputField.text == "207S080" ) {
+        if ( inputField.text == "30002.26" ) {
             image.color = Color.green;
             Instantiate( keyPrefab, keySpawnTransform.position, keySpawnTransform.rotation );
             puzzleSolved = true;
