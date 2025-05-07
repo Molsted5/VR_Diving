@@ -71,6 +71,7 @@ public class DialogeDetector : MonoBehaviour
     void Update()
     {
         fabricatorActive = GameObject.Find("Pincode_box").GetComponent<Sign_puzzle>().pin_activated;
+        Debug.Log(lookingAtDoor);
 
         if ( ( keyDispenserTransform.position - cameraTransform.position ).magnitude < 4 ) {
             if ( Mathf.Abs( Vector3.Angle( -keyDispenserTransform.forward, cameraTransform.forward ) ) < dialogeAngleDetection ) {
@@ -150,6 +151,7 @@ public class DialogeDetector : MonoBehaviour
             }
             if(lookingAtDoor)
             {
+                Debug.Log(door.locksUnlocked);
                 if(door.locksUnlocked == 0)
                 {
                     /*uiText.text = "I need to find the keys for the door...";
