@@ -13,6 +13,7 @@ public class DialogeDetector : MonoBehaviour
     public Door door;
     public TextMeshProUGUI uiText;
     public float uiActiveDuration = 6f;
+    public int locksUnlocked;
 
     public GameObject dialogFabricatorOff;
     public GameObject dialogFabricatorOn;
@@ -70,6 +71,7 @@ public class DialogeDetector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        locksUnlocked = GameObject.Find("Door").GetComponent<Door>().locksUnlocked;
         fabricatorActive = GameObject.Find("Pincode_box").GetComponent<Sign_puzzle>().pin_activated;
         Debug.Log(lookingAtDoor);
 
@@ -151,27 +153,43 @@ public class DialogeDetector : MonoBehaviour
             }
             if(lookingAtDoor)
             {
-                Debug.Log(door.locksUnlocked);
-                if(door.locksUnlocked == 0)
+                if(locksUnlocked == 0)
                 {
                     /*uiText.text = "I need to find the keys for the door...";
                     dialogeUI.transform.position = new Vector3(44.05f, 2.511f, 36.77f);
                     dialogeUI.transform.rotation = Quaternion.Euler(0f, -10.256f, 0f);*/
                     dialogDoor0.SetActive(true);
                 }
-                if (door.locksUnlocked == 1)
+                if (locksUnlocked == 1)
                 {
+                    if(dialogDoor0 == true)
+                    {
+                        dialogDoor0.SetActive(false);
+                        dialogDoor1.SetActive(true);
+                    }
+                    else
+                    {
+                        dialogDoor0.SetActive(true);
+                    }
                     /*uiText.text = "Thats one key down, two more to go...";
                     dialogeUI.transform.position = new Vector3(44.05f, 2.29f, 33f);
                     dialogeUI.transform.rotation = Quaternion.Euler(0f, 64.635f, 0f);*/
-                    dialogDoor1.SetActive(true);
                 }
-                if (door.locksUnlocked == 2)
+                if (locksUnlocked == 2)
                 {
                     /*uiText.text = "Just one more key and I will be safe!..";
                     dialogeUI.transform.position = new Vector3(44.05f, 2.29f, 33f);
                     dialogeUI.transform.rotation = Quaternion.Euler(0f, 64.635f, 0f);*/
-                    dialogDoor2.SetActive(true);
+                    if(dialogDoor0 == true || dialogDoor1 == true)
+                    {
+                        dialogDoor0.SetActive(false);
+                        dialogDoor1.SetActive(false);
+                        dialogDoor2.SetActive(true);
+                    }
+                    else
+                    {
+                        dialogDoor2.SetActive(true);
+                    }
                 }
             }
             if (lookingAtWasher)                                                                                                             
