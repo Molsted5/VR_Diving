@@ -641,7 +641,7 @@ PrefabInstance:
     - target: {fileID: 8262263303488117916, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
       propertyPath: m_text
       value: "That's the Guide-o-Matic, a great tool to get some knowledge on the
-        fly\u2026"
+        fly if you forget something\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 8262263303488117916, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
       propertyPath: m_fontSize
@@ -1986,6 +1986,11 @@ CapsuleCollider:
   m_Height: 0.27888203
   m_Direction: 1
   m_Center: {x: 0, y: 0.13944101, z: 0}
+--- !u!1 &652759487 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 512118141297048522, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+  m_PrefabInstance: {fileID: 1507713025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &748651349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1994,6 +1999,27 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 687326311349947748, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
+      propertyPath: pin_activated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 687326311349947748, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
+      propertyPath: descriptionText
+      value: 
+      objectReference: {fileID: 919398252}
+    - target: {fileID: 910877762622291898, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
+      propertyPath: m_text
+      value: 'To activate fabricator, press buttons below according to the following
+        sequence:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 910877762622291898, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
+      propertyPath: m_fontSize
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 910877762622291898, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 27
+      objectReference: {fileID: 0}
     - target: {fileID: 2125080607842423872, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
       propertyPath: m_Name
       value: Pincode_box
@@ -2056,6 +2082,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7539593458241071378, guid: 280f2e59c13d3fe419a895bcf52023a6, type: 3}
   m_PrefabInstance: {fileID: 1939228444}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &919398252 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 910877762622291898, guid: 023dc848737847143bc780f6edacc9fd, type: 3}
+  m_PrefabInstance: {fileID: 748651349}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1160819653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2066,7 +2103,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 512118141297048522, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
       propertyPath: m_Name
-      value: UI Dialog Fabricator
+      value: UI Dialog Fabricator OFF
       objectReference: {fileID: 0}
     - target: {fileID: 2229978627472324021, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -2516,6 +2553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fabricator
       objectReference: {fileID: 0}
+    - target: {fileID: 5878454806017721603, guid: 76ed518c9c86eb941884980be75fd6eb, type: 3}
+      propertyPath: m_text
+      value: 20 cm
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2567,6 +2608,209 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1507713025
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 512118141297048522, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_Name
+      value: UI Dialog Fabricator ON
+      objectReference: {fileID: 0}
+    - target: {fileID: 2229978627472324021, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2453174877071667398, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 166.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 2453174877071667398, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 306.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2453174877071667398, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0000040616
+      objectReference: {fileID: 0}
+    - target: {fileID: 2453174877071667398, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000078201
+      objectReference: {fileID: 0}
+    - target: {fileID: 2453174877071667398, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00029755
+      objectReference: {fileID: 0}
+    - target: {fileID: 2653345360451732752, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2653345360451732752, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cc11f95a9e243914db010b770a3d760c, type: 3}
+    - target: {fileID: 2653345360451732752, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_Color.a
+      value: 0.74509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307676910093964223, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307676910093964223, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307676910093964223, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 376.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307676910093964223, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 354.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307676910093964223, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.3999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307676910093964223, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307676910093964223, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.3999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307676910093964223, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 25.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307676910093964223, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307676910093964223, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307676910093964223, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307676910093964223, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 848.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307676910093964223, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 659.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165688115172292218, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0013605187
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165688115172292218, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0013605186
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165688115172292218, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.06802595
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165688115172292218, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 44.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165688115172292218, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165688115172292218, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 40.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165688115172292218, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.08290563
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165688115172292218, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165688115172292218, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9965574
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165688115172292218, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165688115172292218, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165688115172292218, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -170.489
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165688115172292218, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165688115172292218, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4278847791548925852, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 206.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4278847791548925852, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 132.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4278847791548925852, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4278847791548925852, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4278847791548925852, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 28.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422779952494643624, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_RenderMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262263303488117916, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_text
+      value: The Fabricator is on! We use this to make snorkels. Jeremy sometimes
+        forgets to put his newly made snorkels in the Hand In Station to check if
+        the size is correct.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262263303488117916, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_fontSize
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262263303488117916, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262263303488117916, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 17
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
 --- !u!1001 &1524920147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3678,9 +3922,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8262263303488117916, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
       propertyPath: m_text
-      value: "I'M LOCKED OUT!?\r\nI need figure out how to get inside the base before
-        I run out of air\u2026 Maybe Jeremy hid some spare keys last time he was
-        here?"
+      value: 'I''M LOCKED OUT!?
+
+        I need figure out how to get inside the
+        base. Maybe Jeremy hid some spare keys last time he was here? I should look
+        around.'
       objectReference: {fileID: 0}
     - target: {fileID: 8262263303488117916, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
       propertyPath: m_fontSize
@@ -4373,6 +4619,14 @@ PrefabInstance:
       propertyPath: dialogCanisterCode
       value: 
       objectReference: {fileID: 2046454391}
+    - target: {fileID: 1952504771084593375, guid: 280f2e59c13d3fe419a895bcf52023a6, type: 3}
+      propertyPath: dialogFabricatorOn
+      value: 
+      objectReference: {fileID: 652759487}
+    - target: {fileID: 1952504771084593375, guid: 280f2e59c13d3fe419a895bcf52023a6, type: 3}
+      propertyPath: dialogFabricatorOff
+      value: 
+      objectReference: {fileID: 1160819654}
     - target: {fileID: 4529825960591389434, guid: 280f2e59c13d3fe419a895bcf52023a6, type: 3}
       propertyPath: m_Height
       value: 1.04
@@ -4945,7 +5199,7 @@ PrefabInstance:
     - target: {fileID: 8262263303488117916, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
       propertyPath: m_text
       value: "If I know Jeremy right, his password is always the service pressure
-        in PSI followed by the capacity in cubic meters of his air tank\u2026\""
+        in bar followed by the capacity in cubic meters of his air tank\u2026\""
       objectReference: {fileID: 0}
     - target: {fileID: 8262263303488117916, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
       propertyPath: m_fontSize
@@ -5147,8 +5401,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8262263303488117916, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
       propertyPath: m_text
-      value: Thats weird, the cannisters for the cleaning station are missing? It
-        is usually Jeremys job to make sure they are refilled
+      value: Thats weird, the cannister for the cleaning station is missing? It is
+        usually Jeremys job to make sure they are refilled
       objectReference: {fileID: 0}
     - target: {fileID: 8262263303488117916, guid: db145849f267dee4ca1c1ffc15a6024e, type: 3}
       propertyPath: m_fontSize
@@ -5769,6 +6023,7 @@ SceneRoots:
   - {fileID: 539174085}
   - {fileID: 2056355667}
   - {fileID: 1160819653}
+  - {fileID: 1507713025}
   - {fileID: 1557814923}
   - {fileID: 1860638575}
   - {fileID: 1993946108}

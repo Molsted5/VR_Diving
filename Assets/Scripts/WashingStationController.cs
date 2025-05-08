@@ -13,6 +13,7 @@ public class WashingStationController : MonoBehaviour
     public Image Indicator;
     public TMP_Text InformText;
 
+    private bool checkingLiquid;
     private bool KeyRecieved;
     private Collider CurrentItem;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -37,8 +38,9 @@ public class WashingStationController : MonoBehaviour
 
     private void OnActivationClick()
     {
-        if(KeyRecieved == false)
+        if(!KeyRecieved && !checkingLiquid)
         {
+            checkingLiquid = true;
             if (CurrentItem != null)
             {
                 StartCoroutine(CheckLiquid(CurrentItem));
@@ -60,6 +62,7 @@ public class WashingStationController : MonoBehaviour
         InformText.text = "Puzzle already solved";
         yield return new WaitForSeconds(3f);
         InformText.text = "Insert cleaning liquid for diving gear";
+        checkingLiquid = false;
     }
     IEnumerator EmptyBox()
     {
@@ -72,6 +75,7 @@ public class WashingStationController : MonoBehaviour
 
         InformText.text = "Insert cleaning liquid for diving gear";
         Indicator.color = Color.grey;
+        checkingLiquid = false;
     }
     IEnumerator CheckLiquid(Collider other)
     {
@@ -96,6 +100,7 @@ public class WashingStationController : MonoBehaviour
         yield return new WaitForSeconds(4f);
         InformText.text = "Insert cleaning liquid for diving gear";
         Indicator.color = Color.grey;
+        checkingLiquid = false;
     }    
    
     

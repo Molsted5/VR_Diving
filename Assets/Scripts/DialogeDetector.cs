@@ -1,4 +1,5 @@
 
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using TMPro;
@@ -12,8 +13,10 @@ public class DialogeDetector : MonoBehaviour
     public Door door;
     public TextMeshProUGUI uiText;
     public float uiActiveDuration = 6f;
+    public int locksUnlocked;
 
-    public GameObject dialogFabricator;
+    public GameObject dialogFabricatorOff;
+    public GameObject dialogFabricatorOn;
     public GameObject dialogDoor0;
     public GameObject dialogDoor1;
     public GameObject dialogDoor2;
@@ -30,6 +33,7 @@ public class DialogeDetector : MonoBehaviour
     private Transform cameraTransform;
     private Coroutine deactivateUICoroutine;
 
+    bool fabricatorActive;
     bool justSpawned = true;
     bool lookingAtCodeMachinge = false;
     bool lookingAtFabricator = false;
@@ -48,7 +52,8 @@ public class DialogeDetector : MonoBehaviour
         gomTransform = GameObject.Find("computer").transform;
         cameraTransform = GameObject.Find( "Main Camera" ).transform;
 
-        dialogFabricator.SetActive(false);
+        dialogFabricatorOff.SetActive(false);
+        dialogFabricatorOn.SetActive(false);
         dialogDoor0.SetActive(false);
         dialogDoor1.SetActive(false);
         dialogDoor2.SetActive(false);
@@ -66,7 +71,10 @@ public class DialogeDetector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        locksUnlocked = GameObject.Find("Door").GetComponent<Door>().locksUnlocked;
+        fabricatorActive = GameObject.Find("Pincode_box").GetComponent<Sign_puzzle>().pin_activated;
+        Debug.Log(lookingAtDoor);
+
         if ( ( keyDispenserTransform.position - cameraTransform.position ).magnitude < 4 ) {
             if ( Mathf.Abs( Vector3.Angle( -keyDispenserTransform.forward, cameraTransform.forward ) ) < dialogeAngleDetection ) {
                 ActivateUIWithCoroutine();
@@ -130,33 +138,58 @@ public class DialogeDetector : MonoBehaviour
             }
             if (lookingAtFabricator)
             {
+                if (!fabricatorActive)
+                {
+                    dialogFabricatorOff.SetActive(true);
+                }
+                else if (fabricatorActive)
+                {
+                    dialogFabricatorOn.SetActive(true);
+                }
                 /*uiText.text = "The Fabricator, Jeremy can never decide which size snorkel he likes so he keeps making new ones. It seems to be turned off, maybe I can power it on somehow?..";
                 dialogeUI.transform.position = new Vector3(44.15f, 2.29f, 39.72f);
                 dialogeUI.transform.rotation = Quaternion.Euler(0f, -138.691f, 0f);*/
-                dialogFabricator.SetActive(true);
+                
             }
             if(lookingAtDoor)
             {
-                if(door.locksUnlocked == 0)
+                if(locksUnlocked == 0)
                 {
                     /*uiText.text = "I need to find the keys for the door...";
                     dialogeUI.transform.position = new Vector3(44.05f, 2.511f, 36.77f);
                     dialogeUI.transform.rotation = Quaternion.Euler(0f, -10.256f, 0f);*/
                     dialogDoor0.SetActive(true);
                 }
-                if (door.locksUnlocked == 1)
+                if (locksUnlocked == 1)
                 {
+                    if(dialogDoor0 == true)
+                    {
+                        dialogDoor0.SetActive(false);
+                        dialogDoor1.SetActive(true);
+                    }
+                    else
+                    {
+                        dialogDoor0.SetActive(true);
+                    }
                     /*uiText.text = "Thats one key down, two more to go...";
                     dialogeUI.transform.position = new Vector3(44.05f, 2.29f, 33f);
                     dialogeUI.transform.rotation = Quaternion.Euler(0f, 64.635f, 0f);*/
-                    dialogDoor1.SetActive(true);
                 }
-                if (door.locksUnlocked == 2)
+                if (locksUnlocked == 2)
                 {
                     /*uiText.text = "Just one more key and I will be safe!..";
                     dialogeUI.transform.position = new Vector3(44.05f, 2.29f, 33f);
                     dialogeUI.transform.rotation = Quaternion.Euler(0f, 64.635f, 0f);*/
-                    dialogDoor2.SetActive(true);
+                    if(dialogDoor0 == true || dialogDoor1 == true)
+                    {
+                        dialogDoor0.SetActive(false);
+                        dialogDoor1.SetActive(false);
+                        dialogDoor2.SetActive(true);
+                    }
+                    else
+                    {
+                        dialogDoor2.SetActive(true);
+                    }
                 }
             }
             if (lookingAtWasher)                                                                                                             
@@ -200,7 +233,8 @@ public class DialogeDetector : MonoBehaviour
             lookingAtGOM = false;
             //dialogeUI.SetActive( false );
 
-            dialogFabricator.SetActive(false);
+            dialogFabricatorOff.SetActive(false);
+            dialogFabricatorOn.SetActive(false);
             dialogDoor0.SetActive(false);
             dialogDoor1.SetActive(false);
             dialogDoor2.SetActive(false);

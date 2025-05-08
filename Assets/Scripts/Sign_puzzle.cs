@@ -140,7 +140,7 @@ public class Sign_puzzle : MonoBehaviour
             Button3.gameObject.SetActive(false);
             Button4.gameObject.SetActive(false);
             descriptionText.text = "Fabricator has been activated";
-            codeTextBox.text = "";
+            codeTextBox.gameObject.SetActive(false);
         }
         else
         {
