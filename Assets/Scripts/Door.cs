@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Door : MonoBehaviour
@@ -8,6 +10,9 @@ public class Door : MonoBehaviour
     public delegate void DoorOpenedDelegate();
     public event DoorOpenedDelegate DoorOpenedEvent;
     public int locksUnlocked;
+    public float speed;
+    public Transform targetPosition;
+    private Coroutine currentCoroutine;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,6 +43,17 @@ public class Door : MonoBehaviour
 
     public void OpenDoor() {
         print( "The door is now open!" );
+        if( currentCoroutine == null ) {
+            currentCoroutine = StartCoroutine( MoveDoor( targetPosition.position ) );
+        }
         DoorOpenedEvent?.Invoke();
+    }
+
+    private IEnumerator MoveDoor( Vector3 endPosition ) {
+        while( Vector3.Distance( transform.position, endPosition ) > 0.01f ) {
+            transform.position = Vector3.MoveTowards( transform.position, endPosition, speed * Time.deltaTime );
+            yield return null;
+        }
+        currentCoroutine = null;
     }
 }
