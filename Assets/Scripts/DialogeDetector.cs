@@ -81,7 +81,7 @@ public class DialogeDetector : MonoBehaviour
                 lookingAtCodeMachinge = true;
             }
         }
-        if ((fabricatorTransform.position - cameraTransform.position).magnitude < 3)
+        if ((fabricatorTransform.position - cameraTransform.position).magnitude < 4)
         {
             if (Mathf.Abs(Vector3.Angle(fabricatorTransform.right, cameraTransform.forward)) < dialogeAngleDetection)
             {
@@ -97,7 +97,7 @@ public class DialogeDetector : MonoBehaviour
                 lookingAtDoor = true;
             }
         }
-        if ((washerTransform.position - cameraTransform.position).magnitude < 3)                                    
+        if ((washerTransform.position - cameraTransform.position).magnitude < 4)                                    
         {
             if (Mathf.Abs(Vector3.Angle(washerTransform.forward, cameraTransform.forward)) < dialogeAngleDetection)
             {
@@ -106,7 +106,7 @@ public class DialogeDetector : MonoBehaviour
             }
         }
 
-        if ((gomTransform.position - cameraTransform.position).magnitude < 4)                             
+        if ((gomTransform.position - cameraTransform.position).magnitude < 6)                             
        {
            if (Mathf.Abs(Vector3.Angle(gomTransform.forward, cameraTransform.forward)) < dialogeAngleDetection)
            {
